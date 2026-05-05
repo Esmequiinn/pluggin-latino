@@ -1,6 +1,6 @@
 /**
  * brazucaplay - Built from src/brazucaplay/
- * Generated: 2026-05-04T21:37:46.572Z
+ * Generated: 2026-05-05T20:11:38.466Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -477,6 +477,22 @@ var require_mirrors = __commonJS({
       ],
       VIDSONIC: [
         "vidsonic.net"
+      ],
+      BARMONREY: [
+        "barmonrey.com"
+      ],
+      VIDMOLY: [
+        "vidmoly.biz",
+        "vidmoly.to"
+      ],
+      UNLIMPLAY: [
+        "unlimplay.com"
+      ],
+      KRAKENFILES: [
+        "krakenfiles.com"
+      ],
+      UPNS: [
+        "upns.online"
       ]
     };
     function isMirror(url, groupName) {
@@ -497,14 +513,11 @@ var require_engine = __commonJS({
     var { isMirror } = require_mirrors();
     function normalizeLanguage(lang) {
       const l = (lang || "").toLowerCase();
-      if (l === "latino" || l === "espa\xF1ol" || l === "lat" || l === "auto") {
+      if (l.includes("latino") || l === "lat" || l.includes("mex") || l.includes("col") || l.includes("arg") || l.includes("chi") || l.includes("per") || l.includes("dub") || l.includes("dual")) {
         return "Latino";
       }
-      if (l.includes("lat") || l.includes("mex") || l.includes("col") || l.includes("arg") || l.includes("chi") || l.includes("per") || l.includes("dub") || l.includes("dual")) {
-        return "Latino";
-      }
-      if (l.includes("esp") || l.includes("cas") || l.includes("spa") || l.includes("cast") || l === "esp") {
-        return "Espa\xF1ol";
+      if (l.includes("esp") || l.includes("cas") || l.includes("spa") || l.includes("cast") || l === "espa\xF1ol") {
+        return "Castellano";
       }
       if (l.includes("sub") || l.includes("vose") || l === "sub") {
         return "Subtitulado";
@@ -512,7 +525,7 @@ var require_engine = __commonJS({
       if (l.includes("eng") || l.includes("en-us") || l === "en") {
         return "Ingl\xE9s";
       }
-      return lang || "Latino";
+      return "Latino";
     }
     function normalizeServer(server, url = "", resolvedServerName = null) {
       if (resolvedServerName)
@@ -588,8 +601,8 @@ var require_engine = __commonJS({
             continue;
           const rawLang = normalizeLanguage(s.lang || s.Audio || s.langLabel || s.language || s.audio || "Latino");
           const l = rawLang.toLowerCase();
-          const isLatino = l.includes("latino") || l.includes("espa\xF1ol");
-          if (!isLatino && providerName !== "FuegoCine")
+          const isAllowed = l === "latino" || l === "castellano";
+          if (!isAllowed && providerName !== "FuegoCine")
             continue;
           const server = normalizeServer(s.serverLabel || s.serverName || s.servername, s.url, s.serverName);
           const quality = s.quality || "HD";

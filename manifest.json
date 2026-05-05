@@ -1,6 +1,6 @@
 {
   "name": "Nuvio Latino",
-  "version": "12.12.45",
+  "version": "13.0.0",
   "scrapers": [
     {
       "id": "embed69",
@@ -27,7 +27,7 @@
       "id": "sololatino",
       "name": "SoloLatino",
       "description": "Servidores universales de alta gama con Player+ (Directo).",
-      "version": "3.2.0",
+      "version": "3.3.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -50,7 +50,7 @@
       "id": "pelisgo",
       "name": "PelisGo",
       "description": "Descargas directas y streaming de alta fidelidad.",
-      "version": "9.0.1",
+      "version": "9.1.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -73,7 +73,7 @@
       "id": "pelisplus",
       "name": "PelisPlusHD",
       "description": "Películas y series en espanol latino desde PelisPlusHD.la",
-      "version": "12.6.0",
+      "version": "12.7.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -164,7 +164,7 @@
       "id": "seriesmetro",
       "name": "SeriesMetro",
       "description": "Especialista en series y películas (Latino) con servidores Fastream",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -187,7 +187,7 @@
       "id": "xupalace",
       "name": "XuPalace",
       "description": "Películas y series en alta definición (Latino, Español y Subtitulado)",
-      "version": "6.0.1",
+      "version": "6.1.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -256,7 +256,7 @@
       "id": "tioplus",
       "name": "TioPlus",
       "description": "Películas y series en HD (Latino) con bypass de doble Base64.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
@@ -371,7 +371,7 @@
       "id": "cuevanaubd",
       "name": "Cuevana UBD",
       "description": "Proveedor rapido JSON nativo de Cuevana.",
-      "version": "1.1.1",
+      "version": "1.2.0",
       "author": "AdrianJael",
       "supportedTypes": [
         "movie",
